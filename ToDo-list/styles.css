@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.bgimage img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    filter: blur(1px);
+    z-index: -100;
+    position: absolute;
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.heading{
+    color: black;
+    font-family:"Teko", sans-serif;
+    font-size: 50px;
+    color: rgb(85, 45, 45);
+    text-align: center;
+}
+
+#container{
+    height: auto;
+    min-height: 500px;
+    width: 400px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 1px;
+    z-index: 100;
+}
+
+.inputsection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+#container input{
+    background-color: transparent;
+    border: 2px solid #1b041ea1;
+    outline: none;
+    padding: 10px 10px 10px 20px;
+    width: 70%;
+    border-radius: 30px;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #322727;
+    font-weight: 550;
+}
+::placeholder {
+    color: #595858;
+}
+#container .btn{
+    font-size: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 16px;
+    background-color:#ffffffc9;
+    cursor: pointer;
+}
+
+#container .btn:hover{
+    background-color: rgb(255, 255, 255);
+}
+.empty-image{
+    z-index: 500;
+    position: absolute;
+    height: 350px;  
+    margin-top: 300px;
+    z-index: -50;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background: rgba(255, 255, 255, 0.503);
+    margin-top: 12px ;
+    text-transform: capitalize;
+    border: 1px solid black;
+    transition: 0.2s ease;
+}
+ul li:hover{
+    background: #fff;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url(img/checkbox.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.todos{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.todos::before{
+    background-image: url(img/circle.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    background: #e5e1f3 ;
+}
+.todo-container{
+    height: 400px;
+    overflow: overlay;
+    cursor:grab;
+}
+.todo-container::-webkit-scrollbar-track{
+    background: #fff;
+    border-radius: 20px;
+}
+.todo-container::-webkit-scrollbar{
+    width: 8px;
+}
+
+.todo-container::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background: #d5d5d5;
+}
